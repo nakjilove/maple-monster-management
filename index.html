@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maplestory Monster Management</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <!-- 로딩 -->
+  <div id="load">
+    <div id="loadingText">Loading ... </div>
+    <img src="./image/다운로드.gif" alt="loading">
+  </div>
+
+
+  <!-- 메인 -->
+  <main>
+    <header>
+      <h1>메이플스토리 몬스터 관리</h1>
+    </header>
+
+    <div class="buttons">
+      <button class="btn" id="add-button">몬스터 추가</button>
+      <button class="btn" id="delete-button">몬스터 삭제</button>
+      <div class="search">
+        <input type="text" class="searchInput" placeholder="이름이나 레벨을 입력하세요">
+        <div class="material-symbols-outlined">search</div>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="manage-header">
+        <input type="checkbox" class="checkbox" id="select-all">
+        <div class="list-space">사진</div>
+        <div class="list-space">이름</div>
+        <div class="list-space">전화번호</div>
+        <div class="list-space">레벨</div>
+        <div class="list-space">드랍 아이템</div>
+      </div>
+      <div class="manage-items" id="list">
+
+      </div>
+    </div>
+
+    <div class="addForm" id="addForm">
+      <h2>몬스터 등록해주세요</h2>
+      <label for="phoo">사진 등록 : </label>
+      <input type="file" id="photo" name="photo" accept="image/*">
+      <div class="upload-photo">
+        <img id="defaultPhoto" src="./image/default-image.png" alt="default photo">
+        <img id="uploadedPhoto" src="" alt="">
+      </div>
+      <label for="name">이름 : </label>
+      <input type="text" id="name" name="name">
+      <label for="phone">전화번호 : </label>
+      <input type="tel" id="phone" name="phone">
+      <label for="level">레벨 : </label>
+      <input type="text" id="level" name="level">
+      <label for="dropItem">드랍 아이템 : </label>
+      <input type="text" id="dropItem" name="dropItem">
+      <button class="btn" id="add-form-btn">등록</button>
+      <button class="btn" id="close-form-btn">취소</button>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
